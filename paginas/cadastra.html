@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="../css/index.css" />
+		<script defer src="../js/gravar.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="div-header">
+				<div class='header-logo'>
+					<img src="../img/cat.png"></img>
+				</div>
+				<div class='header-search'>
+						<input type="text" placeholder='Digite o nome do produto desejado'></input><button type='button' onclick='Pesquisar()'>a</button>
+				</div>
+				<div class='header-links'>
+					<a href="../index.html">Produtos</a>
+					<a href="carrinho.html">Carrinho</a>
+					<a href='remover.html'>Remover</a>
+				</div>
+			</div>
+		</header>
+		<div class='div-body'>
+			<div class='div-form'>
+				<div class='form-text'>
+					<a>Formulário para cadastro de produto</a>
+				</div>
+				<form id='cadastra-forms'>
+					<div class='form-input'>
+						<input name='none' type='text' placeholder='Nome do produto'></input><br><br>
+						<input name='preco'type='number' placeholder='Digite o preço do produto'></input>
+						<label>
+								<a>Imagem produto</a><input id='file' type='file'></input>
+						</label>
+					</div>
+					
+					<div class='form-button'>
+					<button type='button' onclick='Gravar()'>Gravar produto</button>
+					</div>
+				</form>
+				<div id='resposta'>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
