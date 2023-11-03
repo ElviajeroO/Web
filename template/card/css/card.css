@@ -1,0 +1,36 @@
+.card{
+ width: 200px;
+ height: 300px;
+ background-color: #ddd;
+ border: solid 1px #aaa;
+ border-radius: 15px;
+ margin: 15px;
+}
+.card-titulo, .card-genero{
+ width:100%;
+ height:40%;
+ display:flex;
+ justify-content: center;
+ align-items:center;
+ text-align:center;
+}
+.card-acao{
+ cursor:pointer ;
+ width:100%;
+ height:20%;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ text-align:center; 
+ color: #FFF;
+ background-color: #AAA;
+ border-radius: 0px 0px 15px 15px;
+} 
+.card-acao:hover{
+ background-color:#333;
+}
+
+#filmes{
+ display: flex;
+ flex-wrap: wrap;
+}
