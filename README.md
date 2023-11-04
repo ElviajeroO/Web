@@ -6,7 +6,7 @@
   
   Carrinho (Nosso template) -- Marco ta fazendo
   
-  Finalizar Compra (Nosso template)
+  Finalizar Compra (Nosso template) -- Marco ta fazendo
   
   Cadastrar Produto (Template nosso) -- Pronto
   
