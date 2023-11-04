@@ -2,10 +2,9 @@ body{
  margin: 0px;
 }
 header{
-min-width:300px;
-width:100%;
+min-width:300px; width:100%;
 height:8%;
-background-color:black;
+background-color:#363062;
 }
 .div-header{
  width:100%;
@@ -47,7 +46,7 @@ background-color:black;
  height: 30px;
 }
 .header-search button:hover{
-color:grey;
+color:#F99417;
 cursor:pointer;
 }
 .header-links{
@@ -58,9 +57,10 @@ cursor:pointer;
 }
 .header-links a{
  text-decoration:none;
- color:white;
+ color:#F5F5F5;
  margin: 25px 25px;
 }
 .header-links a:hover{
- color:blue;
+ color:#F99417;
 }
+
