@@ -1,0 +1,122 @@
+body{
+ margin: 0px;
+}
+header{
+min-width:300px; width:100%;
+height:8%;
+background-color:#363062;
+}
+.div-header{
+ width:100%;
+ height:100%;
+ display:flex;
+}
+.header-logo {
+ display:flex;
+ width:100px;
+ min-width:80px;
+ height:100%;
+}
+.header-logo img{
+ width:100%;
+ height:100%;
+}
+.header-search{
+ display: flex;
+ align-items:center;
+ width: 60%;
+ min-width:180px;
+ height: 100%;
+ margin: 0px 30px;
+}
+.header-search input{
+ width:100%;
+ height: 30px;
+ border:none;
+ border-radius: 15px 0px 0px 15px;
+ padding-left:15px;
+ outline:none;
+}
+.header-search button{
+ width:5%;
+ min-width:40px;
+ border:none;
+ border-radius: 0px 15px 15px 0px;
+ background-color:white;
+ height: 30px;
+}
+.header-search button:hover{
+color:#F99417;
+cursor:pointer;
+}
+.header-links{
+ display:flex;
+ justify-content:space-around;
+ align-items:center;
+ width:35%;
+}
+.header-links a{
+ text-decoration:none;
+ color:#F5F5F5;
+ margin: 25px 25px;
+}
+.header-links a:hover{
+ color:#F99417;
+}
+.div-body{
+display:flex;
+flex-wrap: wrap;
+background-color: #4D4C7D;
+width:100%;
+height:92%;
+}
+.card{
+width:300px;
+height:300px;
+margin:15px;
+border: solid 1px black;
+border-radius: 5px;
+
+}
+.card-nome{
+width:100%;
+height: 10%;
+background-color:#F99417;
+padding-top:5px;
+border: solid 1px black;
+border-radius: 5px 5px 0px 0px;
+text-align:Center;
+text-transform:uppercase;
+}
+.card-imagem img{
+border: solid 1px black;
+width:100%;
+height:50%;
+}
+.card-valor{
+width:100%;
+height:10%;
+background-color:#F99417;
+border: solid 1px black;
+text-align:center;
+}
+.card-acao{
+width:100%;
+height:30%;
+font-weight:bold;
+border-radius: 0px 0px 5px 5px;
+border: solid 1px black;
+display:flex;
+background-color:#F99417;
+justify-content:Center;
+align-items:center;
+text-transform:uppercase;
+}
+.card-acao:hover{
+background-color:#363062;
+cursor:pointer;
+}
+#produtos{
+display:flex;
+flex-wrap:wrap;
+}
