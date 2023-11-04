@@ -8,6 +8,6 @@
   
   Finalizar Compra (Nosso template)
   
-  Cadastrar Produto (Template nosso) -- Pronto/Falta arrumar o design 
+  Cadastrar Produto (Template nosso) -- Pronto
   
-  Excluir produto (Template nosso) -- João ta fazendo
+  Excluir produto (Template nosso) -- Pronto
