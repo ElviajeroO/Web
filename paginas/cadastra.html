@@ -2,21 +2,24 @@
 	<head>
 		<meta charset="UTF-8" />
 		<link rel="stylesheet" href="../css/index.css" />
+		<link rel='stylesheet' href='../css/fontawesome-free-web/css/all.css'>
 		<script defer src="../js/gravar.js"></script>
 	</head>
 	<body>
 		<header>
 			<div class="div-header">
 				<div class='header-logo'>
-					<img src="../img/cat.png"></img>
+					<img src="../img/cat_real.png"></img>
 				</div>
 				<div class='header-search'>
-						<input type="text" placeholder='Digite o nome do produto desejado'></input><button type='button' onclick='Pesquisar()'>a</button>
+					<input type="text" placeholder='Digite o nome do produto desejado'></input><button type='button' onclick='Pesquisar()'>
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</button>
 				</div>
 				<div class='header-links'>
 					<a href="../index.html">Produtos</a>
 					<a href="carrinho.html">Carrinho</a>
-					<a href='remover.html'>Remover</a>
+					<a href='card.html'>Remover</a>
 				</div>
 			</div>
 		</header>
@@ -30,7 +33,8 @@
 						<input name='none' type='text' placeholder='Nome do produto'></input><br><br>
 						<input name='preco'type='number' placeholder='Digite o preço do produto'></input>
 						<label>
-								<a>Imagem produto</a><input id='file' type='file'></input>
+							Imagem Produto
+							<input id='file' type='file'></input>
 						</label>
 					</div>
 					
