@@ -1,36 +1,57 @@
-.card{
- width: 200px;
- height: 300px;
- background-color: #ddd;
- border: solid 1px #aaa;
- border-radius: 15px;
- margin: 15px;
+.div-body{
+display:flex;
+flex-wrap: wrap;
+background-color: #4D4C7D;
+width:100%;
+height:92%;
 }
-.card-titulo, .card-genero{
- width:100%;
- height:40%;
- display:flex;
- justify-content: center;
- align-items:center;
- text-align:center;
+.card{
+width:300px;
+height:300px;
+margin:15px;
+border: solid 1px black;
+border-radius: 5px;
+
+}
+.card-nome{
+width:100%;
+height: 10%;
+background-color:#F99417;
+padding-top:5px;
+border: solid 1px black;
+border-radius: 5px 5px 0px 0px;
+text-align:Center;
+text-transform:uppercase;
+}
+.card-imagem img{
+border: solid 1px black;
+width:100%;
+height:50%;
+}
+.card-valor{
+width:100%;
+height:10%;
+background-color:#F99417;
+border: solid 1px black;
+text-align:center;
 }
 .card-acao{
- cursor:pointer ;
- width:100%;
- height:20%;
- display:flex;
- align-items:center;
- justify-content:center;
- text-align:center; 
- color: #FFF;
- background-color: #AAA;
- border-radius: 0px 0px 15px 15px;
-} 
-.card-acao:hover{
- background-color:#333;
+width:100%;
+height:30%;
+font-weight:bold;
+border-radius: 0px 0px 5px 5px;
+border: solid 1px black;
+display:flex;
+background-color:#F99417;
+justify-content:Center;
+align-items:center;
+text-transform:uppercase;
 }
-
-#filmes{
- display: flex;
- flex-wrap: wrap;
+.card-acao:hover{
+background-color:#363062;
+cursor:pointer;
+}
+#produtos{
+display:flex;
+flex-wrap:wrap;
 }
