@@ -11,3 +11,5 @@
   Cadastrar Produto (Template nosso) -- Pronto
   
   Excluir produto (Template nosso) -- Pronto
+
+  obs: Quando for testar o site no pc tem que baixar o .zip fontawesome-free-web e descompactar ele dentro da pasta css
