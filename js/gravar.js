@@ -13,7 +13,7 @@ async function Gravar(){
 	var resposta = await promise.text();
 
 
-	   var template = `<a>${resposta}</a>`
+	var template = `<a>${resposta}</a>`;
 
 	document.getElementById('resposta').innerHTML = template;
 
