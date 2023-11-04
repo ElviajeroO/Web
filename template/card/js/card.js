@@ -1,34 +1,30 @@
-
-// filmes
-
-var conteudo = [
-    {id: 1, titulo: "Pulseira de equilibrio", genero: "R$100,00"},
-    {id: 2, titulo: "Avatar", genero: "Aventura"},
-    {id: 3, titulo: "Fuga das Galinhas", genero: "Desenho Animado"},
-    {id: 4, titulo: "Oppenheimer", genero: "Drama"},
-    {id: 5, titulo: "Os dez Mandamentos", genero: "Drama"},
-];
-
-for(var i = 0; i < conteudo.length; i++) {
-
-   var template = 
-	`<div class="card">
-		<div class="card-titulo">${conteudo[i].titulo}</div>
-		<div class="card-genero">${conteudo[i].genero}</div>
-		<div class="card-acao"r onclick="comprar(${conteudo[i].id})" >COMPRAR</div>
-	</div>`;
-
-	document.getElementById('filmes').innerHTML += template;
-}
-
-function comprar(id){
-	var dados = new FormData();
-	dados.append("id_produto", id);
-	
-	fetch("php/comprar.php", {
-		method: "POST",
-		body: dados
+	window.onload = async function(){
+	var promise = await fetch("../php/select.php", {
+		method: 'GET',
 	});
-}
+	 
+	var dados = await promise.json();
 
+	console.log(dados);
+
+	for(var i = 0; i < dados.length; i++){
+		var conteudo = 
+		`<div class='card'>
+				<div class='card-nome'>
+					<a>${dados[i].nome}</a>
+				</div>
+				<div class='card-imagem'>
+					<img src='../upload/${dados[i].nome}'></img>
+				</div>
+				<div class='card-valor'>
+					<a>R$${dados[i].preco}</a>
+				</div>
+				<div class='card-acao' onclick='Apagar(${dados[i].id_produto})'>
+					<a>Apagar produto</a>
+				</div>
+		</div>`
+		
+		document.getElementById('produtos').innerHTML += conteudo;
+	}
+}
 
