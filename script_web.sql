@@ -25,4 +25,6 @@ CREATE TABLE carrinho_produto (
 
 INSERT INTO carrinho (id,frete) VALUES(NULL,0);
 
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'root';
+
 exit;
