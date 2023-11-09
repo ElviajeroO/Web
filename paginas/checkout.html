@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="../css/index.css" />
+		<link rel="stylesheet" href="../css/checkout.css" />
+        <link rel="stylesheet" href="../css/fontawesome-free-web/css/all.css" />
+        <script defer src="../js/checkout.js"></script>
+    </head>
+    <body>
+        <header>
+			<nav class="div-header">
+				<div class='header-logo'>
+					<img src="../img/cat_real.png"></img>
+				</div>
+				<div class='header-search'>
+					<input type="text" placeholder='Digite o nome do produto desejado'></input><button type='button' onclick='Pesquisar()'>
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</button>
+				</div>
+				<div class='header-name'>
+					<a>Isso com toda a certeza não é golpe ;)</a>
+				</div>
+				<div class='header-links'>
+					<ul>
+						<li class='header-item'><a href="../index.html">Produtos</a></li>
+						<li class='header-item'><a href="carrinho.html">Carrinho</a></li>
+						<li class='header-item'><a href='deleta.html'>Remover</a></li>
+					</ul>
+				</div>
+				<div class='header-mobile'>
+					<button onclick='menuShow()'><i class="fa-solid fa-bars"></i></button>	
+				</div>
+			</nav>
+				<div class='header-mobile-menu'>
+					<ul>
+						<li class='header-item'><a href="../index.html">Produtos</a></li>
+						<li class='header-item'><a href="carrinho.html">Carrinho</a></li>
+						<li class='header-item'><a href='deleta.html'>Remover</a></li>
+					</ul>
+				</div>
+		</header>
+
+		<div class="div-body">
+			<div class="titulo">
+                <i class="fa-solid fa-cash-register fa-lg"> Checkout </i>
+            </div>
+
+			<div class="checkout">
+				<div class="checkout-pagamento">
+					<div class="checkout-titulo">
+						Forma de pagamento
+					</div>
+
+					<div class="pagamento-opcoes">
+						<input type="radio" name="pagamento" id="credito" value="c" onclick="escolhe_pagamento('credito')"/>
+						<label for="credito"> Cartão de crédito </label> <br>
+
+						<input type="radio" name="pagamento" id="debito" value="d" onclick="escolhe_pagamento('debito')"/>
+						<label for="debito"> Cartão de débito </label> <br>
+
+						<input type="radio" name="pagamento" id="pix" value="p" onclick="escolhe_pagamento('pix')"/>
+						<label for="pix"> PIX </label>
+					</div>
+
+					<div id="pagamento"></div>
+
+					<div class="pagamento-concluir">
+						<a href="../conclui.html" class="concluir-button" onclick="verifica_dados()">
+							<button>
+								CONCLUIR PAGAMENTO
+							</button>
+						</a>
+						
+					</div>
+				</div>
+
+				<div class="checkout-resumo">
+					<div class="checkout-titulo">
+						Resumo do pedido
+					</div>
+					
+					<div id="resumo"></div>
+
+					<div id="total"></div>
+				</div>
+			</div>
+		</div>
+
+        
+    </body>
+</html>

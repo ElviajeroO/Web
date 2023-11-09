@@ -1,0 +1,185 @@
+.titulo {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0 20px 0;
+  }
+
+.checkout {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.checkout-titulo {
+    width: 100%;
+    height: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: larger;
+}
+
+.checkout-pagamento {
+    width: 50%;
+    min-width: 300px;
+    margin: 0 0 10px 0 ;
+    padding: 10px 0px 10px 10px;
+    border: solid 1px black;
+    border-radius: 15px;
+    background-color: #F99417;
+    color: white;
+}
+
+.pagamento-opcoes {
+    width: 100%;
+    height: 25%;
+}
+
+.pagamento-input {
+    width: 60%;
+}
+
+.pagamento-cvv {
+    width: 60px;
+}
+
+.pagamento-input form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pagamento-input input {
+    -moz-appearance: textfield;
+    appearance: textfield; 
+    margin: 20px 10px 0 0;
+    padding:10px;
+    border-radius:5px;
+    outline:none;
+    border: solid 1px black;
+}
+
+.pagamento-pix {
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.pix-texto {
+    width: 100%;
+    height: 30px;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+}
+
+.pix-img {
+    width: 200px;
+    height: 200px;
+}
+
+.pix-img img {
+    width: 100%;
+    height: 100%;
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+.pagamento-concluir {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.concluir-button {
+    width: 25%;
+    height: 50px;
+}
+
+.concluir-button button {
+    width: 100%;
+    height: 100%;
+    border: solid 1px black;
+    border-radius: 15px;
+    background-color: #4D4C7D;
+    color: white;
+    font-size: larger;
+}
+
+.concluir-button button:hover {
+    cursor: pointer;
+    background-color: 363062;
+}
+
+.checkout-resumo {
+    width: 40%;
+    min-width: 300px;
+    padding: 10px 0 0 10px;
+    border: solid 1px black;
+    border-radius: 15px;
+    background-color: #F99417;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#resumo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.resumo {
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.resumo-img {
+    width: 100px;
+    height: 100px;
+    margin-right: 2px;
+    margin-bottom: 5px;
+    border: solid 1px black;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.resumo-texto {
+    width: 150px;
+    height: 70px;
+}
+
+.resumo-preco {
+    width: 100px;
+    height: 20px;
+}
+
+#total {
+    width: 100%;
+    margin-right: 45px;
+}
+
+.resumo-total {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.total-valores {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}

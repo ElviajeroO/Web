@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="../css/index.css" />
+        <link rel="stylesheet" href="../css/carrinho.css" />
+        <link rel="stylesheet" href="../css/fontawesome-free-web/css/all.css" />
+        <script defer src="../js/carrinho.js"></script>
+    </head>
+    <body>
+        <header>
+			<nav class="div-header">
+				<div class='header-logo'>
+					<img src="../img/cat_real.png"></img>
+				</div>
+				<div class='header-search'>
+					<input type="text" placeholder='Digite o nome do produto desejado'></input><button type='button' onclick='Pesquisar()'>
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</button>
+				</div>
+				<div class='header-name'>
+					<a>Isso com toda a certeza não é golpe ;)</a>
+				</div>
+				<div class='header-links'>
+					<ul>
+						<li class='header-item'><a href="../index.html">Produtos</a></li>
+						<li class='header-item'><a href="carrinho.html">Carrinho</a></li>
+						<li class='header-item'><a href='deleta.html'>Remover</a></li>
+					</ul>
+				</div>
+				<div class='header-mobile'>
+					<button onclick='menuShow()'><i class="fa-solid fa-bars"></i></button>	
+				</div>
+			</nav>
+				<div class='header-mobile-menu'>
+					<ul>
+						<li class='header-item'><a href="../index.html">Produtos</a></li>
+						<li class='header-item'><a href="carrinho.html">Carrinho</a></li>
+						<li class='header-item'><a href='deleta.html'>Remover</a></li>
+					</ul>
+				</div>
+		</header>
+
+        <div class="div-body">
+            <div class="titulo">
+                <i class="fa-solid fa-cart-shopping fa-lg"> Carrinho de compras </i>
+            </div>
+
+            <div class="carrinho">
+                <div class="carrinho-legenda">
+                    <div class="legenda legenda-descricao">
+                        DESCRIÇÃO
+                    </div>
+    
+                    <div class="legenda legenda-quantidade">
+                        QTD
+                    </div>
+    
+                    <div class="legenda legenda-preco">
+                        PREÇO
+                    </div>
+    
+                    <div class="legenda legenda-subtotal">
+                        SUBTOTAL
+                    </div>
+                    
+                </div> 
+        
+                <div class="carrinho-produtos">   
+                    <div class="produtos-descricao">
+                        <div id="descricao"></div>
+                    </div>
+        
+                    <div class="carrinho-quantidade">                    
+                        <div id="quantidade"></div>
+                    </div>
+    
+                    <div class="carrinho-preco">
+                        <div id="preco"></div>
+                    </div>
+    
+                    <div class="carrinho-subtotal">
+                        <div id="subtotal"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="finalizar">
+                <div class="finalizar-frete">
+                    <div class="frete-input">
+                        <input type="text" placeholder="Digite o seu CEP:" id="cep"/>
+                        <button onclick="mostra_frete()"> Calcular frete </button>
+                    </div>
+    
+                    <div id="check" class="frete-check"></div>
+                        
+                    <div id="options"></div>
+                </div>
+
+                <div id="finalizar-button"></div>
+            </div>
+        </div>
+    </body>
+</html>
+
