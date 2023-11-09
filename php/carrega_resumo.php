@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect("localhost:3306", "root", "ShiinaMashiroperfeita!", "tde_pweb");
+        $conn = mysqli_connect("localhost:3306", "root", "root", "web");
 
     $query = "SELECT p.*, cp.quantidade FROM produto p INNER JOIN carrinho_produto cp ON p.id = cp.id_produto;";
 

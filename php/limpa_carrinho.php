@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect("localhost:3306", "root", "ShiinaMashiroperfeita!", "tde_pweb");
+        $conn = mysqli_connect("localhost:3306", "root", "root", "web");
 
     $query = "UPDATE carrinho SET frete = NULL WHERE id = 1;";
     mysqli_query($conn, $query);

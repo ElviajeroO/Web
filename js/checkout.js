@@ -115,7 +115,7 @@ function escolhe_pagamento(id) {
         
         <div class="pagamento-concluir">
 			<div class="concluir-button">
-				<button onclick="window.location.href='conclui.html'">
+				<button onclick="limpa_carrinho()">
 					CONCLUIR PAGAMENTO
 				</button>
 			</div>
@@ -173,13 +173,17 @@ async function verifica_dados() {
     }
 
     if(flag) {
-        var promise = await fetch('../php/limpa_carrinho.php', {
-            method: 'GET'
-        });
-
-        window.location.href = 'conclui.html';
+       limpa_carrinho();
     }
     
+}
+
+async function limpa_carrinho() {
+    var promise = await fetch('../php/limpa_carrinho.php', {
+        method: 'GET'
+    });
+
+    window.location.href = 'conclui.html';
 }
 
 function menuShow(){

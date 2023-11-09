@@ -2,7 +2,7 @@
     $id = $_POST['id'];
     $valor = $_POST['value'];
 
-    $conn = mysqli_connect("localhost:3306", "root", "ShiinaMashiroperfeita!", "tde_pweb");
+    $conn = mysqli_connect("localhost:3306", "root", "root", "web");
 
     $query = "UPDATE carrinho_produto SET quantidade = $valor WHERE id_produto = $id;";
 

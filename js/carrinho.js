@@ -84,7 +84,9 @@ window.onload = async function(){
 	else {
 		var template = 
 		`<div class="finalizar-aviso">
-			Você não possui nenhum item no seu carrinho.
+			<h2>
+				Você não possui nenhum item no seu carrinho.
+			</h2>
 			<a href="../index.html" class="aviso-button">
 				<button>
 					Retornar à loja
@@ -212,11 +214,18 @@ async function salva_frete(id) {
 	});
 
 	template = 
-	`<a href="checkout.html">
-		<button> FINALIZAR COMPRA </button>
-	</a>`
+	`<button onclick="verifica_qtd()"> FINALIZAR COMPRA </button>`
 
 	document.getElementById('finalizar-button').innerHTML = template;
+}
+
+async function verifica_qtd() {
+	await fetch('../php/verifica_qtd.php', {
+		method: 'GET'
+	});
+
+	window.location.href = "checkout.html";
+
 }
 
 function menuShow(){

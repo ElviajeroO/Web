@@ -163,11 +163,19 @@
   color: white;
 }
 
+#finalizar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 .finalizar {
   width: 60%;
   height: 200px;
   min-width: 500px;
-  margin: 5% 0 10% 0;
+  margin: 5% 0 10% 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -180,7 +188,7 @@
   width: 60%;
   height: 200px;
   min-width: 500px;
-  margin: 5% 0 10% 40px;
+  margin: 5% 0 10% 0px;
   display: flex;
   justify-content: center;
   align-items: center;
