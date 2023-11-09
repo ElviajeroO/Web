@@ -71,12 +71,35 @@ function escolhe_pagamento(id) {
         var template = 
         `<div class="pagamento-input">
             <form id="cartao">
-                <input type="number" name="numero" placeholder="Número do cartão:" />
-                <input type="number" name="cvv" placeholder="CVV:" class="pagamento-cvv"/>
-                <input type="text" name="nome" placeholder="Nome do titular do cartão" />
-                <input type="month" name="venc" placeholder="Vencimento do cartão"/>
+                <div class="input-div">
+                    <input type="number" name="numero" placeholder="Número do cartão:" />
+                    <div id="n-check" class="input-check"></div>
+                </div>
+
+                <div class="input-div">
+                    <input type="number" name="cvv" placeholder="CVV:" class="pagamento-cvv"/>
+                    <div id="cvv-check" class="input-check"></div>
+                </div>
+
+                <div class="input-div">
+                    <input type="text" name="nome" placeholder="Nome do titular do cartão" />
+                    <div id="nome-check" class="input-check"></div>
+                </div>
+
+                <div class="input-div">
+                    <input type="month" name="venc" placeholder="Vencimento do cartão"/>
+                    <div id="venc-check" class="input-check"></div>
+                </div>
             </form>
-        </div>`
+        </div>
+        
+        <div class="pagamento-concluir">
+			<div class="concluir-button">
+				<button onclick="verifica_dados()">
+					CONCLUIR PAGAMENTO
+				</button>
+			</div>
+		</div>`
     }
     else {
         var template =
@@ -88,13 +111,84 @@ function escolhe_pagamento(id) {
             <div class="pix-img">
                 <img src="../img/pix.png" />
             </div>
-        </div>`
+        </div>
+        
+        <div class="pagamento-concluir">
+			<div class="concluir-button">
+				<button onclick="window.location.href='conclui.html'">
+					CONCLUIR PAGAMENTO
+				</button>
+			</div>
+		</div>`
     }
     document.getElementById('pagamento').innerHTML = template;
 }
 
-function verifica_dados() {
+async function verifica_dados() {
+    var flag = true;
     var form = new FormData(document.getElementById('cartao'));
 
+    if(form.get('numero') == '' || form.get('numero').length != 16) {
+        var template = 
+        `<i class="fa-regular fa-circle-xmark fa-beat fa-2xl"></i>`
+
+        document.getElementById('n-check').innerHTML = template
+        flag = false;
+    }
+    else {
+        document.getElementById('n-check').innerHTML = ''
+    }
+
+    if(form.get('cvv') == '' || form.get('cvv').length != 3) {
+        var template = 
+        `<i class="fa-regular fa-circle-xmark fa-beat fa-2xl"></i>`
+
+        document.getElementById('cvv-check').innerHTML = template
+        flag = false;
+    }
+    else {
+        document.getElementById('cvv-check').innerHTML = ''
+    }
+
+    if(form.get('nome') == '') {
+        var template = 
+        `<i class="fa-regular fa-circle-xmark fa-beat fa-2xl"></i>`
+
+        document.getElementById('nome-check').innerHTML = template
+        flag = false;
+    }
+    else {
+        document.getElementById('nome-check').innerHTML = ''
+    }
+
+    if(form.get('venc') == '') {
+        var template = 
+        `<i class="fa-regular fa-circle-xmark fa-beat fa-2xl"></i>`
+
+        document.getElementById('venc-check').innerHTML = template
+        flag = false;
+    }
+    else {
+        document.getElementById('venc-check').innerHTML = ''
+    }
+
+    if(flag) {
+        var promise = await fetch('../php/limpa_carrinho.php', {
+            method: 'GET'
+        });
+
+        window.location.href = 'conclui.html';
+    }
     
+}
+
+function menuShow(){
+
+	let menuMobile = document.querySelector('.header-mobile-menu');
+
+	if (menuMobile.classList.contains('open')){
+		menuMobile.classList.remove('open');
+	} else{
+		menuMobile.classList.add('open');
+	}
 }

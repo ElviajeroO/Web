@@ -44,8 +44,9 @@
     width: 60%;
 }
 
-.pagamento-cvv {
-    width: 60px;
+.input-div {
+    display: flex;
+    align-items: center;
 }
 
 .pagamento-input form {
@@ -56,11 +57,27 @@
 .pagamento-input input {
     -moz-appearance: textfield;
     appearance: textfield; 
-    margin: 20px 10px 0 0;
+    margin: 10px 10px 10px 0;
     padding:10px;
     border-radius:5px;
     outline:none;
     border: solid 1px black;
+}
+
+.input-check {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-check i {
+    position: absolute;
+}
+
+.pagamento-cvv {
+    width: 60px;
 }
 
 .pagamento-pix {
@@ -93,6 +110,12 @@
     border-radius: 5px;
 }
 
+.pagamento-warn {
+    width: 30%;
+    height: 50px;
+    color: white;
+}
+
 .pagamento-concluir {
     width: 100%;
     height: 50px;
@@ -109,6 +132,7 @@
 .concluir-button button {
     width: 100%;
     height: 100%;
+    min-width: 130px;
     border: solid 1px black;
     border-radius: 15px;
     background-color: #4D4C7D;

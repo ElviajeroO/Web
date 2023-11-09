@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect("localhost:3306", "root", "root", "tde_pweb");
+    $conn = mysqli_connect("localhost:3306", "root", "ShiinaMashiroperfeita!", "tde_pweb");
 
     $query = "SELECT SUM(p.preco * c.quantidade) AS subtotal FROM carrinho c INNER JOIN produtos p ON c.id_produto = p.id;";
 

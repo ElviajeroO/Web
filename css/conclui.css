@@ -1,0 +1,58 @@
+.conclusao {
+    width: 50%;
+    height: 200px;
+    margin-top: 20px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: solid 1px black;
+    border-radius: 15px;
+    background-color: #F99417;
+    font-size: larger;
+    color: white;
+}
+
+.conclusao-titulo {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conclusao-texto {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conclusao-button {
+    width: 50%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conclusao-button a {
+    width: 100%;
+    height: 100%;
+}
+
+.conclusao-button button {
+    width: 100%;
+    height: 100%;
+    border: solid 1px black;
+    border-radius: 15px;
+    background-color: #4D4C7D;
+    color: white;
+    font-size: larger;
+}
+
+.conclusao-button button:hover {
+    cursor: pointer;
+    background-color: 363062;
+}

@@ -61,6 +61,40 @@ window.onload = async function(){
 		document.getElementById('subtotal').innerHTML += template;
 	}
 
+	if(carrinho.length > 0) {
+		var template = 
+		`<div class="finalizar">
+			<div class="finalizar-frete">
+				<div class="frete-input">
+					<input type="text" placeholder="Digite o seu CEP:" id="cep"/>
+					<button onclick="mostra_frete()"> Calcular frete </button>
+				</div>
+
+				<div id="check"></div>
+					
+				<div id="options"></div>
+			</div>
+
+			<div id="finalizar-button"></div>
+		</div>`
+
+		document.getElementById('finalizar').innerHTML = template;
+	}
+
+	else {
+		var template = 
+		`<div class="finalizar-aviso">
+			Você não possui nenhum item no seu carrinho.
+			<a href="../index.html" class="aviso-button">
+				<button>
+					Retornar à loja
+				</button>
+			</a>
+		</div>`
+
+		document.getElementById('finalizar').innerHTML = template;
+	}
+
 }
 
 async function atualiza_qtd(qtd_id, tipo) {
@@ -183,4 +217,15 @@ async function salva_frete(id) {
 	</a>`
 
 	document.getElementById('finalizar-button').innerHTML = template;
+}
+
+function menuShow(){
+
+	let menuMobile = document.querySelector('.header-mobile-menu');
+
+	if (menuMobile.classList.contains('open')){
+		menuMobile.classList.remove('open');
+	} else{
+		menuMobile.classList.add('open');
+	}
 }

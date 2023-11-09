@@ -176,6 +176,43 @@
   border-radius: 15px;
 }
 
+.finalizar-aviso {
+  width: 60%;
+  height: 200px;
+  min-width: 500px;
+  margin: 5% 0 10% 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #F99417;
+  border: solid 1px black;
+  border-radius: 15px;
+}
+
+.aviso-button {
+  width: 50%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aviso-button button {
+  width: 100%;
+  height: 100%;
+  border: solid 1px black;
+  border-radius: 15px;
+  background-color: #4D4C7D;
+  color: white;
+  font-size: larger;
+}
+
+.aviso-button button:hover {
+  cursor: pointer;
+  background-color: 363062;
+}
+
 .finalizar-frete {
   width: 75%;
   height: 100%;

@@ -2,16 +2,23 @@ create schema web;
 
 use web;
 
-create table produtos(
-	id_produto int not null auto_increment primary key,
-    nome varchar(100) not null,
-    preco float(6,2) not null,
-    cor varchar(100) not null,
-    tamanho varchar(1) not null
+CREATE TABLE produto (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	nome VARCHAR(100) NOT NULL,
+    preco FLOAT(6,2) NOT NULL,
+    cor VARCHAR(100) NOT NULL,
+    tamanho VARCHAR(1) NOT NULL
 );
 
-create table carrinho(
-	id_produto int not null,
-    quantidade int not null,
-    foreign key(id_produto) references web.produtos(id_produto) on delete cascade
+CREATE TABLE carrinho (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    frete FLOAT(4,2)
+);
+
+CREATE TABLE carrinho_produto (
+	id_carrinho INT NOT NULL,
+    id_produto INT NOT NULL,
+    quantidade INT NOT NULL,
+    FOREIGN KEY(id_carrinho) REFERENCES carrinho(id),
+    FOREIGN KEY(id_produto) REFERENCES produto(id)
 );
