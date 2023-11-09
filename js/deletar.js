@@ -53,7 +53,7 @@ window.onload = async function(){
 			<div class='card-valor'>
 				<a>R$${dados[i].preco}</a>
 			</div>
-			<div class='card-acao' onclick='Apagar(${dados[i].id_produto})'>
+			<div class='card-acao' onclick='Apagar(${dados[i].id})'>
 				<a>Apagar produto</a>
 			</div>
 		</div>`

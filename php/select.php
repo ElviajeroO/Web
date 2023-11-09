@@ -2,7 +2,7 @@
 
 	$connection = mysqli_connect('127.0.0.1:3306', 'root', 'root', 'web');
 
-	$query = 'SELECT * FROM produtos;';
+	$query = 'SELECT * FROM produto;';
 
 
 	$resultado = mysqli_query($connection, $query);

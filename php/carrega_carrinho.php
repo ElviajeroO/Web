@@ -1,7 +1,7 @@
 <?php
     $conn = mysqli_connect("localhost:3306", "root", "root", "web");
 
-    $query = "SELECT p.*, cp.quantidade, cp.quantidade * p.preco AS subtotal FROM tde_pweb.carrinho_produto cp INNER JOIN tde_pweb.produto p ON cp.id_produto = p.id;";
+    $query = "SELECT p.*, cp.quantidade, cp.quantidade * p.preco AS subtotal FROM web.carrinho_produto cp INNER JOIN web.produto p ON cp.id_produto = p.id;";
 
     $resultado_query = mysqli_query($conn, $query);
     $dados = array();

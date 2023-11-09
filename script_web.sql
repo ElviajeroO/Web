@@ -22,3 +22,7 @@ CREATE TABLE carrinho_produto (
     FOREIGN KEY(id_carrinho) REFERENCES carrinho(id),
     FOREIGN KEY(id_produto) REFERENCES produto(id)
 );
+
+INSERT INTO carrinho (id,frete) VALUES(NULL,0);
+
+exit;

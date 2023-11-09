@@ -11,7 +11,7 @@
 	if (empty($nome)||empty($preco)||empty($cor)||empty($tamanho)||empty($file['type']))
 		echo 'Preencha todos os campos';
 	else
-		$query = "INSERT INTO produtos (nome, preco, cor, tamanho) VALUES('$nome', '$preco', '$cor', '$tamanho')";
+		$query = "INSERT INTO produto (nome, preco, cor, tamanho) VALUES('$nome', '$preco', '$cor', '$tamanho')";
 		mysqli_query($connection, $query);
 		$novo = "../upload/".$nome;
                 move_uploaded_file($file["tmp_name"], $novo);
