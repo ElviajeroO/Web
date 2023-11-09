@@ -1,4 +1,5 @@
 body{
+background-color: #4D4C7D;
  margin: 0px;
 }
 header{
@@ -25,6 +26,7 @@ background-color:#363062;
  display: flex;
  align-items:center;
  width: 60%;
+ max-width:360px;
  min-width:180px;
  height: 100%;
  margin: 0px 30px;
@@ -49,11 +51,80 @@ background-color:#363062;
 color:#F99417;
 cursor:pointer;
 }
-.header-links{
+.header-name{
+color:white;
+margin-left:auto;
+min-width:100px;
+height:100%;
+display:flex;
+justify-content:center;
+font-size:15px;
+align-items:center;
+} 
+.header-mobile, .header-mobile-menu{
+display:none;
+}
+@media screen and (max-width:760px){
+ .header-item, .header-links {
+ display:none;
+ }
+ .header-mobile{
+  display:flex;
+  align-items:center;
+  margin-left:40px;
+  margin-right:20px;
+ }
+ .header-mobile button{
+ width:40px;
+ background:none;
+ font-size:25px;
+ height:40px;
+ border-radius:5px;
+ border:none;
+ }
+ .header-mobile button:hover{
+  cursor:pointer;
+ }
+ .header-mobile-menu{
+ width:100%;
+ height:100px;
+ }
+ .header-mobile-menu ul{
  display:flex;
+ margin:0;
+ padding:0;
+ flex-direction:column;
+ text-align:center;
+ }
+ .header-mobile-menu .header-item{
+ background-color:#363062;
+ display:block;
+ }
+ .header-mobile-menu li{
+ padding-top:5px;
+ padding-bottom:5px;
+ }
+ .header-item a{
+ text-decoration:none;
+ font-size:15px;
+ color:#F5F5F5;
+ }
+.header-item a:hover{
+ color:#F99417;
+ font-size:18px;
+}
+ .open{display:block;}
+}
+.header-links{
+ margin-left:auto;
+ margin-right:0px;
+ width:30%;
+}
+.header-links ul{
+list-style:none;
  justify-content:space-around;
  align-items:center;
- width:35%;
+ display:flex;
 }
 .header-links a{
  text-decoration:none;
@@ -68,14 +139,13 @@ display:flex;
 justify-content:center;
 align-items:center;
 flex-wrap: wrap;
-background-color: #4D4C7D;
 width:100%;
 height:92%;
 }
 .div-form{
  width:350px;
  min-width:300px;
- height:450px;
+ height:525px;
  background-color:#F99417;
  border: solid 1px black;
  border-radius: 15px;
@@ -103,11 +173,17 @@ align-content:center;
 align-items:center;
 }
 .form-input input[type='text'], input[type='number']{
+-moz-appearance: textfield;
 padding:10px;
 border-radius:5px;
 outline:none;
 border: solid 1px black;
 margin-top:20px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .form-input input[type='file']{
 display:none;
