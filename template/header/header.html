@@ -1,13 +1,13 @@
 <html>
 	<head>
 		<meta charset="UTF-8" />
-		<link rel="stylesheet" href="css/index.css" />
-		<link rel='stylesheet' href='css/fontawesome-free-web/css/all.css'>
-		<script defer src="../js/gravar.js"></script>
+		<link rel="stylesheet" href="../css/index.css" />
+		<link rel='stylesheet' href='../css/fontawesome-free-web/css/all.css'>
+		<script defer src="../js/index.js"></script>
 	</head>
 	<body>
 		<header>
-			<div class="div-header">
+			<nav class="div-header">
 				<div class='header-logo'>
 					<img src="../img/cat_real.png"></img>
 				</div>
@@ -16,12 +16,25 @@
 						<i class="fa-solid fa-magnifying-glass"></i>
 					</button>
 				</div>
-				<div class='header-links'>
-					<a href="../index.html">Produtos</a>
-					<a href="carrinho.html">Carrinho</a>
-					<a href='deleta.html'>Remover</a>
+				<div class='header-name'>
+					<a>Isso com toda a certeza não é golpe ;)</a>
 				</div>
-			</div>
+				<div class='header-links'>
+					<ul>
+						<li class='header-item'><a href="../index.html">Produtos</a></li>
+						<li class='header-item'><a href="carrinho.html">Carrinho</a></li>
+						<li class='header-item'><a href='deleta.html'>Remover</a></li>
+					</ul>
+				</div>
+				<div class='header-mobile'>
+					<button onclick='menuShow()'><i class="fa-solid fa-bars"></i></button>	
+				</div>
+			</nav>
+				<div class='header-mobile-menu'>
+					<ul>
+						<li class='header-item'><a href="../index.html">Produtos</a></li>
+						<li class='header-item'><a href="carrinho.html">Carrinho</a></li>
+						<li class='header-item'><a href='deleta.html'>Remover</a></li>
+					</ul>
+				</div>
 		</header>
-	</body>
-</html>		
