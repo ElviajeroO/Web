@@ -13,5 +13,5 @@ create table produtos(
 create table carrinho(
 	id_produto int not null,
     quantidade int not null,
-    foreign key(id_produto) references web.produtos(id_produto)
+    foreign key(id_produto) references web.produtos(id_produto) on delete cascade
 );
