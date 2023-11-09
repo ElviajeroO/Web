@@ -10,7 +10,7 @@ window.onload = async function(){
 		var template =
 		`<div class="descricao-conteudo">
 			<div class="descricao-img">
-				<img src="../img/produtos/${carrinho[i].id}.png" />
+				<img src="../upload/${carrinho[i].nome}" />
 			</div>
 		
 			<div class="descricao-texto">
